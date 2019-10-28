@@ -98,11 +98,12 @@ function draw() {
   }
 
   //game over
-  if (dist(playert, playery, ballsx[i], ballsy[i]) < 20) {
+  if (dist(playert, playery, mouseX, mouseY) < 20) {
     textSize(60);
     text('Game over', 160, 250);
     hitSound.play();
     gameoverSound.play();
     noLoop();
+    BGMSound.pause();
   }
 }
