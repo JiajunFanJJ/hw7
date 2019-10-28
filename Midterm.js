@@ -28,6 +28,9 @@ function setup() {
 function draw() {
   background(235);
 
+  textSize(30);
+  text('Do Not Touch Me', 180, 420);
+  
   //player body
   rect(playert, playery, 30, 20);
   rect(playerm, 460, 20, 20);
@@ -99,6 +102,7 @@ function draw() {
 
   //game over
   if (dist(playert, playery, mouseX, mouseY) < 20) {
+    background(235);
     textSize(60);
     text('Game over', 160, 250);
     hitSound.play();
